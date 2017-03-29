@@ -13,4 +13,4 @@ RUN apk -Uuv add ca-certificates openssl groff less python py-pip && \
 EXPOSE 8080
 
 
-CMD ["java", "-Xms256M", "-jar", "DynamoDBLocal.jar", "-dbPath", ".", "--sharedDb", "-port", "8080"]
+CMD ["java", "-Xmx128M", "-Xmx128M", "-jar", "DynamoDBLocal.jar", "-dbPath", ".", "--sharedDb", "-port", "8080"]
